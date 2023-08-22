@@ -1,8 +1,8 @@
 pipeline {
     agent {label 'JDK'}
     parameters {
-        choice(name: 'BRANCH', choices['main', 'lucky', 'lucky_sr'], description: 'select your branch')
-        choice(name: 'MVNgoals', choices['package', 'install', 'clean install', 'deploye'], description: 'select your task')
+        choice(name: 'BRANCH', choices: ['main', 'lucky', 'lucky_sr'], description: 'select your branch')
+        choice(name: 'MVNgoals', choices: ['package', 'install', 'clean install', 'deploye'], description: 'select your task')
     }
     stages {
         stage('vcs') {
